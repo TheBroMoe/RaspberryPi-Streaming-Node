@@ -7,7 +7,7 @@ var child = spawn('/opt/vc/bin/raspivid',
 '-']);
 
 var server = http.createServer(function(req, res){
-	child.stdout.pipe(response);
+	child.stdout.pipe(res);
 });
 
 server.listen(8080);
